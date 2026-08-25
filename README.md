@@ -1,4 +1,4 @@
-One of the things that I really like about modern Android phones is the Bubble notifications for chat and messages. I tried my best to make something like it as a follower alert. So now let me introduce to you - Bubble Alerts. It is a follower alert that supports Twitch, YouTube, Kick, and TikTok!
+One of the things that I really like about modern Android phones is the Bubble notifications for chat and messages. I tried my best to make something like it for my stream alerts. So now let me introduce to you - Bubble Alerts. It is an alert overlay that supports Twitch, YouTube, Kick, and TikTok!
 
 ---
 
@@ -21,12 +21,13 @@ You need this to be able to listen to TikTok events. If you need help setting th
 
 2. **Open TikFinity (For TikTok)**
     - I believe TikFinity’s WebSocket Server is on by default so there’s nothing else that needs to be done except for having it opened with your TikTok account logged in.
-3. Copy the link below and add **Bubble Alerts** as a **Browser Source** to your streaming software of choice. 
-    
-    ```xml
-    https://rexbordz.github.io/BubbleAlerts/
-    ```
-    
+   
+3. **Configure your alerts** - Open the [settings page](https://rexbordz.github.io/BubbleAlerts/settings) in a new tab and configure your alerts
+   
+    <img width="2517" height="1317" alt="image" src="https://github.com/user-attachments/assets/359db230-8b16-4c09-8cc2-b91afcc6eec9" />
+
+4. Press the `Copy Link URL` button and add **Bubble Alerts** as a **Browser Source** to your streaming software of choice.
+       
     <img width="1201" height="974" alt="image" src="https://github.com/user-attachments/assets/1b227120-ad08-4088-87ea-c323c0ab8a67" />
 
 > [!TIP]
