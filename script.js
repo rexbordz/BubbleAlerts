@@ -503,8 +503,8 @@ function YouTubeEvent(event, data) {
   switch (event) {
     case "NewSubscriber":
       if (!youtubeSub) return;
-      username = data.username;
-      avatarUrl = data.avatar;
+      username = data.name ?? data.username;
+      avatarUrl = data.profileImageUrl ?? data.avatar;
       message = "Just subscribed!";
       break;
 
