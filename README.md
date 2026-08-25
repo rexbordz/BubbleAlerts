@@ -35,37 +35,11 @@ You need this to be able to listen to TikTok events. If you need help setting th
 
 ---
 
-## **⚙️ Custom Settings**
-
-You can kind of customize the widget by adding these parameters at the end of the URL:
-
-**Align Left (Make widget pop up on the left side of the screen):**
-
-```xml
-?alignRight=false
-```
-
-**Custom Streamer.bot Address:**
-
-```xml
-?address=[Insert custom address here]
-```
-
-**Custom Streamer.bot Port:**
-
-```xml
-?port=[Insert custom port here]
-```
-
-So with custom settings, your browser source link should look like this:
-
-`widget-link.com?alignRight=false?address=127.0.0.2?port=8081`
-
----
-
 ## 💝 Donate
 
-Your donations help me create better content and improve stream quality! If you'd like to support my work and see more of it, you can donate through any of the following:
+Your donations help me create better content and improve stream quality! If you'd like to support my work and see more of it, you can donate through the following:
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M3C7R1J)
 
 ---
 
