@@ -482,7 +482,7 @@ async function TwitchEvent(event, data) {
     case "WatchStreak":
       if (!twitchWatchStreak) return;
       username = data.displayName;
-      message = `Currently on a <strong>${data.streak_count}</strong> stream streak!`;
+      message = `Currently on a <strong>${data.streakCount ?? data.watch_count ?? data.streak_count}</strong> watch-streak!`;
       break;
 
     default:
