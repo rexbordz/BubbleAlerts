@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <link rel="icon" href="../.common/assets/images/favicon.ico">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/rexbordz/widget-core@main/assets/images/favicon.ico">
   <title>Bubble Alerts Settings</title>
   <style>
     html, body {
@@ -50,7 +50,7 @@
       };
       const sessionKey = 'settings-core:' + window.location.pathname;
       sessionStorage.setItem(sessionKey, JSON.stringify(bootConfig));
-      frame.src = rootDir + '.common/core/settings/index.html?sessionKey=' + encodeURIComponent(sessionKey);
+      frame.src = 'https://cdn.jsdelivr.net/gh/rexbordz/widget-core@main/core/settings/index.html?sessionKey=' + encodeURIComponent(sessionKey);
     })();
   </script>
 </body>
