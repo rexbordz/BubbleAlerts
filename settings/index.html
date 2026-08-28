@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/rexbordz/widget-core@main/assets/images/favicon.ico">
+  <link rel="icon" href="https://rexbordz.github.io/widget-core/assets/images/favicon.ico">
   <title>Bubble Alerts Settings</title>
   <style>
     html, body {
@@ -26,8 +26,8 @@
   <iframe id="settingsCoreFrame" title="Settings"></iframe>
 
   <script>
-    (async function () {
-      const CORE_BASE = 'https://cdn.jsdelivr.net/gh/rexbordz/widget-core@main/core/settings/';
+    (function () {
+      const CORE_BASE = 'https://rexbordz.github.io/widget-core/core/settings/';
       const frame = document.getElementById('settingsCoreFrame');
       const currentDir = window.location.href.replace(/index\.html(?:\?.*)?$/, '');
       const rootDir = currentDir.replace(/settings\/$/, '');
@@ -49,21 +49,10 @@
           ]
         },
       };
-      const sessionKey = 'settings-core:' + window.location.pathname;
-      sessionStorage.setItem(sessionKey, JSON.stringify(bootConfig));
-
-      // jsDelivr serves .html as text/plain (anti-phishing measure), so the
-      // iframe can't navigate to it directly - fetch the markup and inject it
-      // via srcdoc instead. A <base> tag keeps its relative asset references
-      // resolving against the CDN folder, and since the query string is lost
-      // for a srcdoc document, the session key is handed off via a global
-      // instead (see the __SETTINGS_SESSION_KEY__ fallback in script.js).
-      const html = await fetch(CORE_BASE + 'index.html').then((res) => res.text());
-      const injected = html.replace(
-        '<head>',
-        `<head><base href="${CORE_BASE}"><script>window.__SETTINGS_SESSION_KEY__ = ${JSON.stringify(sessionKey)};<\/script>`
-      );
-      frame.srcdoc = injected;
+      // The config rides along in the hash so it survives regardless of where
+      // this widget is served from - sessionStorage would only reach the frame
+      // while both pages share an origin.
+      frame.src = CORE_BASE + 'index.html#boot=' + encodeURIComponent(JSON.stringify(bootConfig));
     })();
   </script>
 </body>
